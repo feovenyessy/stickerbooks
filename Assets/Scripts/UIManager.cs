@@ -49,19 +49,26 @@ public class UIManager : MonoBehaviour {
 		//LoadLevel("babyanimals");
 		//UIManager.activeBook = "babyanimals";
 		SceneManager.LoadSceneAsync("baby");
-		Debug.Log ("starting baby");
 	}
 
 	public void start_dino() {
 		//UIManager.activeBook = "dinosaurs";
 		SceneManager.LoadSceneAsync("dino");
-		Debug.Log ("starting dinosaurs");
 	}
 
 	public void start_things() {
 		//UIManager.activeBook = "thingsthatgo";
 		SceneManager.LoadSceneAsync("things");
-		Debug.Log ("starting things");
+	}
+
+	public void start_home() {
+		//UIManager.activeBook = "thingsthatgo";
+		SceneManager.LoadSceneAsync("startup");
+	}
+
+	public void exit_app() {
+		//UIManager.activeBook = "thingsthatgo";
+		Application.Quit();
 	}
 
 }
