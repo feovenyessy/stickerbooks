@@ -6,14 +6,12 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
 
-	public GameObject LoadingScene;
-	public Image LoadingBar;
-	public Text textPercentage;
+	public GameObject LoadingObject;
 
 	public static string activeBook = "";
 
 	void Start() {
-		//Debug.Log ("Heló, Marci");
+		LoadingObject.SetActive (false);
 	}
 	/*
 	public void LoadLevel (string nomScene)
@@ -48,16 +46,19 @@ public class UIManager : MonoBehaviour {
 		*/
 		//LoadLevel("babyanimals");
 		//UIManager.activeBook = "babyanimals";
+		LoadingObject.SetActive (true);
 		SceneManager.LoadSceneAsync("baby");
 	}
 
 	public void start_dino() {
 		//UIManager.activeBook = "dinosaurs";
+		LoadingObject.SetActive (true);
 		SceneManager.LoadSceneAsync("dino");
 	}
 
 	public void start_things() {
 		//UIManager.activeBook = "thingsthatgo";
+		LoadingObject.SetActive (true);
 		SceneManager.LoadSceneAsync("things");
 	}
 
